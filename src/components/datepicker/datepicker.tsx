@@ -140,6 +140,7 @@ const WheelDatePicker: React.FC<DatepickerProps> = ({
   // Create wheel picker components
   const dayWheel = (
     <WheelPicker
+      key="day"
       items={days}
       onChange={handleDayChange}
       value={temp.day.toString()}
@@ -151,6 +152,7 @@ const WheelDatePicker: React.FC<DatepickerProps> = ({
 
   const monthWheel = (
     <WheelPicker
+      key="month"
       items={months}
       onChange={handleMonthChange}
       value={months[temp.month - 1]}
@@ -162,6 +164,7 @@ const WheelDatePicker: React.FC<DatepickerProps> = ({
 
   const yearWheel = (
     <WheelPicker
+      key="year"
       items={years}
       onChange={handleYearChange}
       value={temp.year.toString()}
